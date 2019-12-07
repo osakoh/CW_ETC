@@ -96,6 +96,23 @@ public class Lesson {
         }
     }
     
+        
+    public boolean studentHasBooked(Student stud) {
+        return records.contains(stud);
+    }
+    
+    public void removeLesson(Student stud, Tutor tut) {
+        if (!studentHasBooked(stud)){
+            System.out.println("You have to book a lesson first");
+        } else {
+            tut.eraseStudent(stud);
+            System.out.println("<----->" + stud.getName() + " cancelled " + tut.getSubject() + "<----->\n");
+            Student.cancelledLesson++;
+        }
+    }
+    
+    
+    
     
 
     
