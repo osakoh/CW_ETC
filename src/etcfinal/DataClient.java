@@ -162,6 +162,24 @@ public class DataClient {
         System.out.println(students.get(studentNumber) + " changed subject to " + tutors.get(subjectName));
     }
     
+    public void attendLesson(){
+        lesson.showBookedStudent();
+    }
+    
+        
+    public void requestBook(String s){
+        int index = 1;
+        for (String b : textBook){
+            System.out.println(index++ + ". " + b);
+        }
+
+        if (textBook.contains(s.toLowerCase())){
+            System.out.println("Requested " + s);
+        } else {            
+            System.out.println("Sorry, " + s + " is not available");        
+        } 
+    }
+    
  
         
     public void mainMenu(){
