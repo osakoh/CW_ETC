@@ -162,6 +162,7 @@ public class DataClient {
         System.out.println(students.get(studentNumber) + " changed subject to " + tutors.get(subjectName));
     }
     
+    // shows list of students who have booked a lesson
     public void attendLesson(){
         lesson.showBookedStudent();
     }
@@ -180,8 +181,53 @@ public class DataClient {
         } 
     }
     
- 
-        
+    
+    public void caseRun(){  
+
+        do
+        {
+            mainMenu();
+            try 
+            {        
+                choice = scan.nextInt();
+                switch (choice)
+                {
+                    case 1:
+                        System.out.println("");
+                        lesson.bookLesson(selectStudent(), selectSubject());
+                        lesson.timeTable();
+                        break;
+                    case 2:
+                        changeBooking();
+                        break;
+                    case 3:
+                        lesson.removeLesson(selectStudent(), selectSubject());
+                        break;
+                    case 4:
+                        attendLesson();
+                        break;
+                    case 5:
+                        System.out.println("Case 6");
+                        break;
+                    case 6:
+                        showReport();
+                        break;
+                    case 0:
+                        System.out.println("Thank you and goodbye!");
+                        return;
+                    default:
+                          System.out.println("\nInvalid Option!");
+                          break;
+                }    
+            } catch (InputMismatchException e) { 
+                System.out.println("\nINVALID INPUT!"); 
+                scan.next();
+            }
+            
+        } while (choice != 0);        
+    }
+    
+    
     public void mainMenu(){
         System.out.println("+-------- Extra Tuition Centre (ETC) --------+");
         System.out.println("| 1.      Book lesson                        |");
