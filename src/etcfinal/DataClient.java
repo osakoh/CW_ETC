@@ -105,7 +105,7 @@ public class DataClient {
         return students.get(num);  
     }
     
-        public Tutor selectSubject(){
+    public Tutor selectSubject(){
         for (int count = 0; count < tutors.size(); count++) {
             System.out.println((count + 1) + " . " + tutors.get(count));
         }
@@ -122,7 +122,15 @@ public class DataClient {
         }
         return tutors.get(num);  
     }
-    
+           
+    public void showReport(){
+        String leftAlignFormat = "| %-15s | %-17s |%n";
+        System.out.format("|------------ Monthly Report ---------|%n");
+        System.out.format("| Total Attended  |    Total Canceled |%n");
+        System.out.format("+-----------------+-------------------+%n");
+        System.out.printf(leftAlignFormat, Student.bookedLesson, Student.cancelledLesson);
+        System.out.format("+-----------------+-------------------+%n\n");
+    } 
     
  
         
