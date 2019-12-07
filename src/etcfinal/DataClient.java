@@ -100,10 +100,27 @@ public class DataClient {
             selectStudent();
         } else {
             System.out.println(students.get(num) + " selected\n");
-//            studentAttended.add(students.get(num));
         }
         
         return students.get(num);  
+    }
+    
+        public Tutor selectSubject(){
+        for (int count = 0; count < tutors.size(); count++) {
+            System.out.println((count + 1) + " . " + tutors.get(count));
+        }
+
+        System.out.println("Select 1,2 or 3 for corresponding subject: ");
+        int num = scan.nextInt();
+        num -= 1;
+
+        if ( num > tutors.size() | num < 0) {
+            System.out.println("Invalid entry\n");
+            selectSubject();
+        } else {
+            System.out.println(tutors.get(num) + " selected\n");
+        }
+        return tutors.get(num);  
     }
     
     
