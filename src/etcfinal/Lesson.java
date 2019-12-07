@@ -111,7 +111,21 @@ public class Lesson {
         }
     }
     
-    
+        
+    public void timeTable(){
+        String leftAlignFormat = "| %-8s | %-22s | %-20s | %-15d | %-12d |%n";
+        System.out.format("+----------+------------------ Time Table -----------------+-----------------+--------------+%n");
+        System.out.format("|  Tutor   |        Subject         |     Time             | Available Slots | Booked Slots |%n");
+        for (int i=0; i < tutors.size(); i++) {
+            System.out.format("+----------+------------------------+----------------------+-----------------+--------------+%n");
+            System.out.printf(leftAlignFormat, tutors.get(i).getName(), tutors.get(i).getSubject(), tutors.get(i).getAvailableTime(), tutors.get(i).getSlot(), tutors.get(i).remainingSlots());
+        }
+        System.out.format("+----------+------------------------+----------------------+-----------------+--------------+%n");
+
+        for (String b : textBook ) {
+            System.out.println(b);
+        }
+    }
     
     
 
