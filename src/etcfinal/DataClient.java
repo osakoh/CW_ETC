@@ -132,6 +132,36 @@ public class DataClient {
         System.out.format("+-----------------+-------------------+%n\n");
     } 
     
+       
+    public void changeBooking(){
+        for (int count = 0; count + 1 < students.size(); count++) {
+            System.out.println((count + 1) + " . " + students.get(count));
+        }
+        
+        System.out.println("Enter student number: ");
+        studentNumber = scan.nextInt(); 
+        studentNumber -= 1;
+        if ( studentNumber > students.size() | studentNumber < 0) {
+            System.out.println("Invalid entry\n");
+        } else {
+            for (int count = 0; count < tutors.size(); count++) {
+            System.out.println((count + 1) + " . " + tutors.get(count));
+            }
+            System.out.print("\nSelect desired subject: ");
+            subjectName = scan.nextInt();
+            subjectName -= 1;
+            
+            if ( subjectName > tutors.size() | subjectName < 0) {
+                System.out.println("Invalid entry\n");
+                selectSubject();
+            } else {
+                students.set(studentNumber, students.get(studentNumber));
+                System.out.println(tutors.get(subjectName) + " selected\n");
+            }
+        }
+        System.out.println(students.get(studentNumber) + " changed subject to " + tutors.get(subjectName));
+    }
+    
  
         
     public void mainMenu(){
