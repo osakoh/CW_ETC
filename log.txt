@@ -1,0 +1,89 @@
+commit 6494fd3192caaa1cf9198e4c100bda1b8c536b94
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sun Dec 8 18:18:33 2019 +0000
+
+    Added test cases
+
+commit 72dd5f84d51911dccbb2021820dc878d3125223e
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:34:18 2019 +0000
+
+    Implemented switch case
+
+commit c3c64184b9c882d4ede70f2b28217ec66ce2161e
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:32:19 2019 +0000
+
+    requestBook method implemented
+
+commit 5b5e1a947304fd7d78be83f430236c5ed67f8c53
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:31:37 2019 +0000
+
+    changeBooking method implemented
+
+commit 4601b1248941f1a1ca9d470e12a5edf55dced05a
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:30:57 2019 +0000
+
+    showReport method implemented
+
+commit ada8b7e0201ab2039e07f1c88cb010bd3456a56e
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:29:41 2019 +0000
+
+    Tutor selection method implemented in DataClient class
+
+commit 6249f8a4f37eb1b3e3add4cb769515b2719e0686
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:28:28 2019 +0000
+
+    Implemented a method in DataClient class which selects a student
+
+commit 03453ed8bd6f67252422b8cb040e9e74deca0a9a
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:24:06 2019 +0000
+
+    MainMenu method created in DataClient class
+
+commit 183a199d74e99cd78d529ebd0a8164c6e482b7f8
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:22:26 2019 +0000
+
+    Created DataClient class
+
+commit 827939521358b34bd5501f0ebc2ed91ca9b1d704
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:21:17 2019 +0000
+
+    Timetable method added in lesson class
+
+commit 451d0b7755c40545da583d9c6bb794cd7ce1ba16
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:20:03 2019 +0000
+
+    Implemented method to remove students from list
+
+commit e97ee6a26e77a2581c975e0ea8c16008e0255544
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:18:05 2019 +0000
+
+    Implemented method to add students
+
+commit e2669a3aba5ddc8b59b8cfabd5b8a4d4681390c2
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:12:58 2019 +0000
+
+    Created books class
+
+commit 92169518129f264bba0b56bc9fb6b5b18899ebb6
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:11:03 2019 +0000
+
+    Tutor class created
+
+commit e3687fb48fa8d305efbf1f8ec315dbce3e191eb1
+Author: Michael Osakoh <macmive@gmail.com>
+Date:   Sat Dec 7 15:09:10 2019 +0000
+
+    Created student class
