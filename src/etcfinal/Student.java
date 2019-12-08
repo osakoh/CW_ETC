@@ -5,6 +5,8 @@
  */
 package etcfinal;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Osas
@@ -115,18 +117,9 @@ public class Student {
                         + "Date of birth: " + getDob() + '\n'
                         + "Address: " + getAddress() + '\n'
                         + "Emergency contact: " + getEmergContact() + '\n'
-                        + "Phone number: " + getPhoneNo() + '\n');
+                        + "Phone number: " + getPhoneNo() + '\n'
+                        + "Booked lesson: " + getBookedLesson() );
     }
-    
-    public String bookedLesson(){
-        String s = "";
-        for (Lesson l : lesson)
-        {
-            s = s + l.toString()+ "\n";
-        }
-        return s;
-    }
-    
     
     
     @Override

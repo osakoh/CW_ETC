@@ -159,7 +159,12 @@ public class DataClient {
                 System.out.println(tutors.get(subjectName) + " selected\n");
             }
         }
-        System.out.println(students.get(studentNumber) + " changed subject to " + tutors.get(subjectName));
+        if (lesson.studentHasBooked(students.get(studentNumber))){
+            System.out.println(students.get(studentNumber) + " changed subject to " + tutors.get(subjectName));
+        } else {
+            System.out.println("You have to book a lesson first");
+        }
+        
     }
     
     // shows list of students who have booked a lesson
@@ -207,7 +212,7 @@ public class DataClient {
                         attendLesson();
                         break;
                     case 5:
-                        System.out.println("Case 6");
+                        lesson.bookList();
                         break;
                     case 6:
                         showReport();

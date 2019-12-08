@@ -14,10 +14,11 @@ import java.util.Scanner;
  */
 public class Lesson {
     
-    private ArrayList<Tutor> tutors = new ArrayList<>();
-    private static ArrayList<Student> students = new ArrayList<>();
-    private static ArrayList<Student> records = new ArrayList<>();
-    private ArrayList<String> textBook = new ArrayList<>();
+    ArrayList<Tutor> tutors = new ArrayList<>();
+    static ArrayList<Student> students = new ArrayList<>();
+    static ArrayList<Student> records = new ArrayList<>();
+    static ArrayList<Tutor> subRecords = new ArrayList<>();
+    ArrayList<String> textBook = new ArrayList<>();
 
     Scanner scan = new Scanner(System.in);
     
@@ -42,7 +43,7 @@ public class Lesson {
     public void addStudent (Student stud) {
         students.add(stud);
     }
-    
+       
     /**
      *
      * @param tut adds a tutor
@@ -92,6 +93,7 @@ public class Lesson {
             records.add(stud);
             
             System.out.println("<--------------" + stud.getName() + " has booked " + tut.getSubject() + "-------------->\n");
+            subRecords.add(tut);
             Student.bookedLesson++;
         }
     }
@@ -101,9 +103,20 @@ public class Lesson {
         return records.contains(stud);
     }
     
+    public void bookList(){
+        if (!subRecords.isEmpty()){
+            for (Tutor s : subRecords){
+            System.out.println(s.getSubject());
+            }
+        } else {
+            System.out.println("Book list empty\n");
+        }
+        
+    }
+    
     public void removeLesson(Student stud, Tutor tut) {
         if (!studentHasBooked(stud)){
-            System.out.println("You have to book a lesson first");
+            System.out.println("You have to book a lesson first\n");
         } else {
             tut.eraseStudent(stud);
             System.out.println("<----->" + stud.getName() + " cancelled " + tut.getSubject() + "<----->\n");
@@ -126,8 +139,5 @@ public class Lesson {
             System.out.println(b);
         }
     }
-    
-    
-
     
 }
