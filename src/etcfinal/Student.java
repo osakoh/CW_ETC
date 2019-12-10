@@ -112,13 +112,13 @@ public class Student {
     }
     
     public void studentDetails(){
-        System.out.println("Name: " + getName() + '\n'
-                        + "Gender: " + getGender() + '\n'
-                        + "Date of birth: " + getDob() + '\n'
-                        + "Address: " + getAddress() + '\n'
-                        + "Emergency contact: " + getEmergContact() + '\n'
-                        + "Phone number: " + getPhoneNo() + '\n'
-                        + "Booked lesson: " + getBookedLesson() );
+        System.out.println("Name:              " + getName());
+        System.out.println("Gender:            " + getGender());
+        System.out.println("Date of birth:     " + getDob());
+        System.out.println("Address:           " + getAddress());
+        System.out.println("Emergency contact: " + getEmergContact());
+        System.out.println("Phone number:      " + getPhoneNo());
+        System.out.println("Booked lesson:     " + getBookedLesson());
     }
     
     
